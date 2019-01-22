@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("ListeKaydet", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="container">
+            <div>
+                <div class="jumbotron">
+                    <h1>Sistem Toplama Sayfası</h1>
+                 </div>
+            </div>
+            <div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">İşlemci</label>
+                    <div class="col-sm-6">
+                        <select class="custom-select" id="Islemci" name="Islemci">
+                            <option>İntel Core i5 9600K Socket 1151 3.7GHz 9MB 14nm</option>
+                            <option>İntel Core i9 9620X Socket 2066 4.1GHz 16.50MB 14nm</option>
+                            <option>AMD Ryzen 5 2600 Socket AM4 3.9GHz 19MB 65W</option>
+                            <option>AMD Ryzen 5 2600X Socket AM4 4.2GHz 19MB 95W</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">Anakart</label>
+                    <div class="col-sm-6">
+                        <select class="custom-select" id="Anakart" name="Anakart">
+                            <option>GIGABYTE GA-B250M-D2V Intel B250 Socket 1151 DDR4 2400(O.C)MHz</option>
+                            <option>MSİ B350M Pro-Vd Plus AM4 AMD Ryzen DDR4 3200+MHz(O.C)</option>
+                            <option>ASUS PRIME X299-A Intel X299 Soket 2066 DDR4 4133Mhz (O.C) USB 3.1 Anakart</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">RAM</label>
+                    <div class="col-sm-6">
+                        <select class="custom-select" id="Ram" name="Ram">
+                            <option>CORSAIR 8GB (1x8GB) Vengeance Siyah DDR4 3000MHz CL16 Single Ram</option>
+                            <option>Kingston 16GB (2x8GB) HyperX Predator RGB DDR4 2933MHz CL15 1.35V XMP Ram</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">SSD</label>
+                    <div class="col-sm-6">
+                        <select class="custom-select" id="SolidDrive" name="SolidDrive">
+                            <option>Kingston 240GB UV500 Serisi Sata 3.0 Cache SSD (Okuma 520MB / Yazma 500MB)</option>
+                            <option>Samsung 256GB 860 PRO SATA 3.0 (Okuma 560MB / Yazma 530MB) SSD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">HDD</label>
+                    <div class="col-sm-6">
+                        <select class="custom-select" id="HardDrive" name="HardDrive">
+                            <option>WD Blue 3,5" SATA III 6Gb/s 2TB 64MB</option>
+                            <option>Toshiba 3.5" 2TB SATA 3.0 64MB Önbellek 7200Rpm Harddisk</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">Power Supply</label>
+                    <div class="col-sm-6">
+                        <select class="custom-select" id="PowerSupply" name="PowerSupply">
+                            <option>COOLER MASTER ELITE V3 600W AKTİF PFC 120MM FANLI GÜÇ KAYNAĞI</option>
+                            <option>RAMPAGE RMP-650-80PB 650W 80PLUS BRONZE 140MM FANLI GÜÇ KAYNAĞI</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary col-sm-10" type="submit" value="Ekle">Topla</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</body>
+</html>

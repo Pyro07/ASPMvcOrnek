@@ -1,0 +1,49 @@
+﻿@model List<ASPMvcOrnek.Models.Liste>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BilesenListesi</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Bileşen Listesi</h1>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>İşlemci</th>
+                        <th>Anakart</th>
+                        <th>RAM</th>
+                        <th>SSD</th>
+                        <th>HDD</th>
+                        <th>Power Supply</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var liste in Model)
+                    {
+                    <tr>
+                        <td>@liste.Islemci</td>
+                        <td>@liste.Anakart</td>
+                        <td>@liste.Ram</td>
+                        <td>@liste.SolidDrive</td>
+                        <td>@liste.HardDrive</td>
+                        <td>@liste.PowerSupply</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
